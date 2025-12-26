@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>HurtCore — Próximamente 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #0d0d0d;
+      color: #f2f2f2;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 120px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(64px, 10vw, 140px);
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation:
+        appear 1.6s ease forwards,
+        breathe 6s ease-in-out infinite 1.6s,
+        glitch 7s infinite;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: normal;
+      color: #aaaaaa;
+      margin-bottom: 60px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 25px;
+      color: #dddddd;
+    }
+
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: #444;
+      margin: 60px auto;
+    }
+
+    /* ───── NUEVA SECCIÓN PRODUCTO ───── */
+    .product-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin: 80px 0;
+      align-items: center;
+    }
+
+    .product-image {
+      border: 1px solid #333;
+      padding: 20px;
+      background: #111;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .product-info {
+      border: 1px solid #333;
+      padding: 40px 30px;
+      background: #111;
+      font-size: 22px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 768px) {
+      .product-section {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .status {
+      margin-top: 60px;
+      font-size: 14px;
+      letter-spacing: 2px;
+      color: #888;
+      text-transform: uppercase;
+    }
+
+    footer {
+      margin-top: 80px;
+      font-size: 12px;
+      color: #666;
+    }
+
+    @keyframes appear {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes breathe {
+      0% { letter-spacing: 4px; }
+      50% { letter-spacing: 10px; }
+      100% { letter-spacing: 4px; }
+    }
+
+    @keyframes glitch {
+      0%, 92%, 100% { text-shadow: none; }
+      94% { text-shadow: 2px 0 #00ff99; }
+      96% { text-shadow: -2px 0 #00ff99; }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>HURTCORE</h1>
+  <h2>Digital scars</h2>
+
+  <div class="divider"></div>
+
+  <p>
+    HurtCore es una productora creativa enfocada en identidad de marca,
+    contenido visual y soluciones digitales con una dirección estética clara,
+    honesta y estratégica.
+  </p>
+
+  <p>
+    Trabajamos desde el concepto, la imagen y la narrativa visual para
+    construir marcas con carácter, coherencia y presencia en un entorno
+    digital saturado.
+  </p>
+
+  <p>
+    Nuestro enfoque combina dirección creativa, fotografía, diseño,
+    audiovisual y marketing, entendiendo cada proyecto como un proceso
+    consciente y no como una fórmula genérica.
+  </p>
+
+  <div class="divider"></div>
+
+  <!-- ───── SECCIÓN NUEVA ───── -->
+  <div class="product-section">
+    <div class="product-image">
+      <img src="https://res.cloudinary.com/ddmr1bsnc/image/upload/v1766781730/imgbotella.jpg_hgywfp.jpg" alt="Producto HurtCore">
+    </div>
+
+    <div class="product-info">
+      Producto Maqueta
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- AQUÍ SIGUE TU FORMULARIO MAILERLITE (SIN TOCAR) -->
+  <!-- … tu código de MailerLite continúa igual … -->
+
+  <p class="status">
+    Sitio en construcción<br>
+    Lanzamiento 2026
+  </p>
+
+  <footer>
+    © HurtCore · Todos los derechos reservados
+  </footer>
+
+</div>
+
+</body>
+</html>
+
