@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>HurtCore — Próximamente 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #0d0d0d;
+      color: #f2f2f2;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 120px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(64px, 10vw, 140px);
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation:
+        appear 1.6s ease forwards,
+        breathe 6s ease-in-out infinite 1.6s,
+        glitch 7s infinite;
+    }
+
+    /* ───── SERVICIOS ───── */
+    .services {
+      display: flex;
+      justify-content: space-between;
+      max-width: 700px;
+      margin: 0 auto 40px auto;
+      font-size: 14px;
+      letter-spacing: 3px;
+      color: #888;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: normal;
+      color: #aaaaaa;
+      margin-bottom: 60px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 25px;
+      color: #dddddd;
+    }
+
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: #444;
+      margin: 60px auto;
+    }
+
+    /* ───── BLOQUE IMAGEN + TÍTULO ───── */
+    .image-row {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      margin: 80px 0;
+      text-align: left;
+    }
+
+    .image-row img {
+      max-width: 60%;
+      border-radius: 2px;
+    }
+
+    .image-title {
+      font-size: 28px; /* tamaño duplicado */
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #888;
+    }
+
+    @media (max-width: 768px) {
+      .services {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+
+      .image-row {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .image-row img {
+        max-width: 100%;
+      }
+    }
+
+    /* ───── ANIMACIONES ───── */
+    @keyframes appear {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes breathe {
+      0% { letter-spacing: 4px; }
+      50% { letter-spacing: 10px; }
+      100% { letter-spacing: 4px; }
+    }
+
+    @keyframes glitch {
+      0%, 92%, 100% { text-shadow: none; }
+      94% { text-shadow: 2px 0 #00ff99; }
+      96% { text-shadow: -2px 0 #00ff99; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>HURTCORE</h1>
+
+    <div class="services">
+      <span>IDENTIDAD DE MARCA</span>
+      <span>REDES SOCIALES</span>
+      <span>AUDIOVISUAL</span>
+    </div>
+
+    <h2>Digital scars</h2>
+
+    <div class="divider"></div>
+
+    <p>
+      HurtCore es una productora creativa enfocada en identidad de marca,
+      contenido visual y soluciones digitales con una dirección estética clara,
+      honesta y estratégica.
+    </p>
+
+    <p>
+      Trabajamos desde el concepto, la imagen y la narrativa visual para
+      construir marcas con carácter, coherencia y presencia en un entorno
+      digital saturado.
+    </p>
+
+    <p>
+      Nuestro enfoque combina dirección creativa, fotografía, diseño,
+      audiovisual y marketing, entendiendo cada proyecto como un proceso
+      consciente y no como una fórmula genérica.
+    </p>
+
+    <div class="image-row">
+      <img src="https://res.cloudinary.com/ddmr1bsnc/image/upload/v1766781730/imgbotella.jpg_hgywfp.jpg" alt="Producto maqueta">
+      <div class="image-title">PRODUCTO MAQUETA</div>
+    </div>
+
+    <div class="image-row">
+      <img src="https://res.cloudinary.com/ddmr1bsnc/image/upload/v1766782276/chatarra-hurtcore_hbwv4m.jpg" alt="Fotografía gastronómica">
+      <div class="image-title">FOTOGRAFÍA GASTRONÓMICA</div>
+    </div>
+
+    <div class="divider"></div>
+
+  </div>
+
+</body>
+</html>
