@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Entrar - HurtCore</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    input, button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      width: 250px;
+    }
+    button {
+      background-color: #00ff99;
+      color: #0d0d0d;
+      font-weight: bold;
+      cursor: pointer;
+      width: 270px;
+    }
+    button:hover {
+      background-color: #00cc7a;
+    }
+  </style>
+</head>
+<body>
+  <h1>Iniciar sesión</h1>
+  <input type="email" id="email" placeholder="Correo electrónico">
+  <input type="password" id="password" placeholder="Contraseña">
+  <button onclick="login()">Entrar</button>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+    // ✅ Reemplaza estos datos por los que ves en Firebase
+    const firebaseConfig = {
+      apiKey: "TU_API_KEY",
+      authDomain: "TU_AUTH_DOMAIN",
+      projectId: "TU_PROJECT_ID",
+      appId: "TU_APP_ID"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    window.login = function() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      signInWithEmailAndPassword(auth, email, password)
+        .then(() => {
+          alert("Login correcto ✅");
+          // Aquí puedes redirigir a otra página si quieres, ejemplo:
+          // window.location.href = "dashboard.html";
+        })
+        .catch((error) => {
+          alert("Error: " + error.message);
+        });
+    };
+  </script>
+</body>
+</html>
